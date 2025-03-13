@@ -20,41 +20,48 @@
     <!-- <meta name="twitter:image" content="...preview.jpg"> -->
     <script type="module" src="/src/main.js" defer></script>
   </head>
-  <body>
-    <main>
-      <section aria-labelledby="sign-up">
+  <body class="body">
+    <main class="main">
+      <section class="sign-up" aria-labelledby="sign-up">
         <picture>
           <source media="(width > 75em)" srcset="/src/assets/images/illustration-sign-up-desktop.svg">
-          <img src="/src/assets/images/illustration-sign-up-mobile.svg" alt="" width="375" height="284">
+          <img class="sign-up__img" src="/src/assets/images/illustration-sign-up-mobile.svg" 
+                alt="" width="375" height="284">
         </picture>
 
-        <div>
-          <h2 id="sign-up">Stay updated!</h2>
-          <p>Join 60,000+ product managers receiving monthly updates on:</p>
-          <ul>
-            <li>Product discovery and building what matters</li>
-            <li>Measuring to ensure updates are a success</li>
-            <li>And much more!</li>
+        <div class="sign-up__content">
+          <h2 class="sign-up__title" id="sign-up">Stay updated!</h2>
+
+          <p class="sign-up__desc">Join 60,000+ product managers receiving monthly updates on:</p>
+
+          <ul class="sign-up__list">
+            <li class="sign-up__list-item"><img class="sign-up__list-item-icon" src="/src/assets/images/icon-list.svg" alt="" width="21" height="21">Product discovery and building what matters</li>
+            <li class="sign-up__list-item"><img class="sign-up__list-item-icon" src="/src/assets/images/icon-list.svg" alt="" width="21" height="21">Measuring to ensure updates are a success</li>
+            <li class="sign-up__list-item"><img class="sign-up__list-item-icon" src="/src/assets/images/icon-list.svg" alt="" width="21" height="21">And much more!</li>
           </ul>
-          <form id="form" novalidate>
-            <div>
-              <label for="email">Email address</label>
-              <span aria-live="polite" id="email-error"></span>
+
+          <form class="sign-up__form" id="form" novalidate>
+            <div class="sign-up__label-content">
+              <label class="sign-up__label" for="email">Email address</label>
+              <span class="sign-up__error" id="email-error" aria-live="polite"></span>
             </div>
-            <input type="email" id="email" name="email" placeholder="email@company.com" aria-describedby="email-error">
-            <button type="submit">Subscribe to monthly newsletter</button>
+
+            <input class="sign-up__email" type="email" id="email" name="email" placeholder="email@company.com" aria-describedby="email-error">
+            
+            <button class="sign-up__button" type="submit">Subscribe to monthly newsletter</button>
           </form>
         </div>
       </section>
 
-      <dialog open aria-labelledby="modal-title" aria-describedby="modal-desc">
-        <div>
-          <img src="/src/assets/images/icon-success.svg" alt="" width="64" height="64">
-          <h2 id="modal-title">Thanks for subscribing!</h2>
-          <p id="modal-desc">A confirmation email has been sent to <span></span>. 
+      <dialog class="modal" aria-labelledby="modal-title" aria-describedby="modal-desc">
+        <div class="modal__content">
+          <img class="modal__icon" src="/src/assets/images/icon-success.svg" 
+                alt="" width="64" height="64">
+          <h2 class="modal__title" id="modal-title">Thanks for subscribing!</h2>
+          <p class="modal__desc" id="modal-desc">A confirmation email has been sent to <span class="modal__email"></span>. 
             Please open it and click the button inside to confirm your subscription.
           </p>
-          <button>Dismiss message</button>
+          <button class="modal__button">Dismiss message</button>
         </div>
       </dialog>
     </main>

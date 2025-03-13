@@ -1,1 +1,45 @@
 @use '@scss/global/functions' as *;
+
+.sign-up {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+    }
+    
+    &__list-item {
+        display: flex;
+        column-gap: 16px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+    }
+
+    &__label-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.modal {
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+    }
+}

@@ -1,1 +1,81 @@
 @use '@scss/global/functions' as *;
+@use '@scss/global/mixins' as m;
+
+.body {
+    min-block-size: 100vh;
+}
+
+.sign-up {
+    /* max-inline-size: rem(608);
+    margin: auto; */
+    
+    &__img {
+        inline-size: 100%;
+        block-size: auto;
+    }
+
+    &__content {
+        padding-inline: fluid(24, 40, 375, 768);
+        padding-block-end: 44px;
+    }
+
+    &__form {
+        margin-block-start: 16px;
+    }
+
+    &__list-item-icon {
+        inline-size: rem(21);
+        block-size: rem(21);
+    }
+
+    &__label {
+        font-weight: var(--fw-2);
+        font-size: var(--fs-label);
+    }
+
+    &__error {
+        color: var(--clr-secondary);
+        font-size: var(--fs-label);
+        font-weight: var(--fw-2);
+    }
+
+    &__email {
+        padding-block: 16px;
+        padding-inline: 24px;
+        margin-block-end: 16px;
+        border-radius: rem(8);
+        border: none;
+        outline: rem(1) solid var(--clr-input);
+
+        &:focus {
+            outline: rem(2) solid var(--clr-primary);
+        }
+    }
+
+    &__button{
+        @include m.button;
+        padding-inline: 47px;
+        padding-block: 16px;
+    }
+}
+
+.modal {
+    padding-inline: 24px;
+    padding-block-start: 149px;
+    padding-block-end: 70px;
+
+    &__icon {
+        inline-size: rem(64);
+        block-size: rem(64);
+    }
+
+    &__button {
+        @include m.button;
+        padding-inline: 100px;
+        padding-block: 16px;
+    }
+
+    &__email {
+        font-weight: var(--fw-2);
+    }
+}

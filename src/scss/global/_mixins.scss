@@ -1,1 +1,29 @@
 @use './functions' as * ;
+
+@mixin button {
+    border-radius: rem(8);
+    border: none;
+    color: var(--clr-light);
+    background-color: var(--clr-primary);
+    font-weight: var(--fw-2);
+    cursor: pointer;
+    position: relative;
+    overflow: clip;
+    z-index: 1;
+    outline: none;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: var(--clr-linear-grad);
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    &:hover::before,
+    &:focus-visible::before {
+        opacity: 1;
+    }
+}
