@@ -56,8 +56,7 @@
 
     &__button{
         @include m.button;
-        padding-inline: 47px;
-        padding-block: 16px;
+        padding: 16px;
     }
 }
 
@@ -68,6 +67,7 @@
     padding-block-end: 70px;
     min-inline-size: 100%;
     min-block-size: 100%;
+    z-index: 1000;
 
     &__icon {
         inline-size: rem(64);

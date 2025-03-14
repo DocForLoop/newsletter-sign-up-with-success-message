@@ -30,7 +30,7 @@
         </picture>
 
         <div class="sign-up__content">
-          <h2 class="sign-up__title" id="sign-up">Stay updated!</h2>
+          <h2 class="sign-up__title" id="sign-up" tabindex="-1">Stay updated!</h2>
 
           <p class="sign-up__desc">Join 60,000+ product managers receiving monthly updates on:</p>
 
@@ -43,10 +43,10 @@
           <form class="sign-up__form" id="form" novalidate>
             <div class="sign-up__label-content">
               <label class="sign-up__label" for="email">Email address</label>
-              <span class="sign-up__error" id="email-error" aria-live="polite"></span>
+              <span class="sign-up__error" id="email-error" role="alert"></span>
             </div>
 
-            <input class="sign-up__email" type="email" id="email" name="email" placeholder="email@company.com" aria-describedby="email-error">
+            <input class="sign-up__email" type="email" id="email" name="email" autocomplete="email" placeholder="email@company.com" aria-describedby="email-error">
             
             <button class="sign-up__button" type="submit">Subscribe to monthly newsletter</button>
           </form>
@@ -58,7 +58,7 @@
           <img class="modal__icon" src="/src/assets/images/icon-success.svg" 
                 alt="" width="64" height="64">
           <h2 class="modal__title" id="modal-title">Thanks for subscribing!</h2>
-          <p class="modal__desc" id="modal-desc">A confirmation email has been sent to <span class="modal__email"></span>. 
+          <p class="modal__desc" id="modal-desc" role="alert">A confirmation email has been sent to <span class="modal__email"></span>. 
             Please open it and click the button inside to confirm your subscription.
           </p>
           <button class="modal__button">Dismiss message</button>

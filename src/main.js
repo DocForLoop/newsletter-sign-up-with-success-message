@@ -12,15 +12,15 @@ const handleSubmit = (e) => {
     e.preventDefault();
 
     const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData);
+    const {email} = Object.fromEntries(formData);
 
-    if (data.email === '' || !emailPattern.test(data.email)) {
+    if (email === '' || !emailPattern.test(email)) {
         emailError.textContent = 'Valid email required';
         emailInput.classList.add('error');
     } else {
-        modalEmail.textContent = data.email;
+        modalEmail.textContent = email;
         dialog.showModal();
-
+        dialog.focus();
     }
 };
 
@@ -37,4 +37,11 @@ form.addEventListener('submit', handleSubmit);
 closeBtn.addEventListener('click', () => {
     dialog.close();
     modalEmail.textContent = '';
+    emailInput.value = '';
+
+    const signUpTitle = document.querySelector('.sign-up__title');
+
+    if(signUpTitle) {
+        signUpTitle.focus();
+    }
 });
