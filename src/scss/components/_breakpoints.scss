@@ -18,3 +18,74 @@
     }
 }
 
+@media (width > em(768)) {
+
+    .body {
+        background-color: var(--clr-primary);
+        display: grid;
+        place-content: center;
+    }
+
+    .main {
+        display: grid;
+        place-content: center;
+    }
+
+    .sign-up {
+        background-color: var(--clr-light);
+        border-radius: rem(36);
+        max-inline-size: rem(608);
+
+        &__picture {
+            margin-inline: 40px;
+            margin-block-start: 42.8px;
+            inline-size: rem(528);
+            block-size: rem(358);
+        }
+        
+        &__img {
+            inline-size: rem(528);
+            block-size: rem(358);
+            object-fit: cover;
+            border-radius: rem(16);
+        }
+
+        &__content {
+            padding-block-end: 42.8px;
+        }
+
+        &__form {
+            margin-block-start: 0;
+        }
+
+        &__email {
+            margin-block-end: 8px;
+        }
+
+        &__button {
+            padding-inline: 147.5px;
+        }
+    }
+
+    .modal {
+        min-inline-size: unset;
+        min-block-size: unset;
+        inline-size: rem(504);
+        block-size: rem(520);
+        padding: 60px;
+        border-radius: rem(36);
+        position: fixed;
+        inset-block-start: 50%;
+        inset-inline-start: 50%;
+        transform: translate(-50%, -50%);
+
+        &::backdrop {
+            background-color: var(--clr-primary);
+        }
+
+        &__desc {
+            margin-block-end: 0;
+            max-inline-size: unset;
+        }
+    }
+}
