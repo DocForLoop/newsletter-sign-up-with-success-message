@@ -3,6 +3,11 @@
 
 .body {
     min-block-size: 100vh;
+    
+}
+
+.main {
+    container-type: inline-size;
 }
 
 .sign-up {
@@ -47,7 +52,7 @@
         border: none;
         outline: rem(1) solid var(--clr-input);
 
-        &:focus {
+        &:focus-visible {
             outline: rem(2) solid var(--clr-primary);
         }
     }
@@ -60,22 +65,49 @@
 }
 
 .modal {
+    border: none;
     padding-inline: 24px;
     padding-block-start: 149px;
     padding-block-end: 70px;
+    min-inline-size: 100%;
+    min-block-size: 100%;
 
     &__icon {
         inline-size: rem(64);
         block-size: rem(64);
     }
 
+    &__title {
+        max-inline-size: 18ch;
+    }
+    
+    &__desc {
+        max-inline-size: 36ch;
+        margin-block-end: 263px;
+    }
+
     &__button {
         @include m.button;
         padding-inline: 100px;
         padding-block: 16px;
+        transition: box-shadow 0.3s ease-in-out;
+
+        &:hover, &:focus-visible {
+            box-shadow: 0 rem(16) rem(32) var(--clr-btn-shadow);
+        }
     }
 
     &__email {
         font-weight: var(--fw-2);
+    }
+}
+
+.error {
+    color: var(--clr-secondary);
+    background-color: var(--clr-error-bg);
+    outline: rem(2) solid var(--clr-secondary);
+
+    &:focus-visible {
+        outline: rem(2) solid var(--clr-secondary);
     }
 }

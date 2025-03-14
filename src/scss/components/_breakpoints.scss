@@ -1,1 +1,20 @@
 @use '@scss/global/functions' as *;
+
+@container (width > #{em(445)}) {
+
+    .modal {
+        
+        &__content {
+            text-align: center;
+        }
+        
+        &__content {
+            align-items: center;
+        }
+        
+        &__button {
+            inline-size: 85%;
+        }
+    }
+}
+
