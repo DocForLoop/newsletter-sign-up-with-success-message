@@ -21,7 +21,7 @@
 @media (width > em(768)) {
 
     .body {
-        background-color: var(--clr-primary);
+        background-color: var(--clr-bg);
         display: grid;
         place-content: center;
     }
@@ -76,7 +76,7 @@
         transform: translate(-50%, -50%);
 
         &::backdrop {
-            background-color: var(--clr-primary);
+            background-color: var(--clr-bg);
             z-index: 999;
         }
 
