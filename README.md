@@ -20,8 +20,8 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 
 ### Links
 
-- [Solution](https://www.frontendmentor.io/)
-- [Live Site](https://)
+- [Solution](https://www.frontendmentor.io/solutions/newsletter-sign-up-form-with-flexbox-and-grid-UTwHoYWaj3)
+- [Live Site](https://newsletter-sign-up-with-success-message-drab-three.vercel.app/)
 
 ## My process
 
