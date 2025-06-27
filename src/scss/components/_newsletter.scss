@@ -3,6 +3,7 @@
 
 .body {
     min-block-size: 100vh;
+    position: relative;
 }
 
 .main {
@@ -106,5 +107,31 @@
 
     &:focus-visible {
         outline: rem(2) solid var(--clr-secondary);
+    }
+}
+
+.attribution {
+    position: absolute;
+    inset-block-end: 10px;
+    inset-inline: 0;
+    font-size: 12px;
+    text-align: center;
+    color: var(--clr-primary);
+}
+
+.attribution__link {
+    border-radius: 3px;
+    color: var(--clr-primary);
+    text-decoration: underline;
+    transition: color 0.3s;
+
+    &:hover,
+    &:focus-visible {
+        color: var(--clr-attr);
+    }
+
+    &:focus-visible {
+        outline: 3px solid var(--clr-attr);
+        outline-offset: 2px;
     }
 }

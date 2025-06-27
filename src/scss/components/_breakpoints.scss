@@ -120,4 +120,21 @@
             padding-inline: 0px;
         }
     }
+
+    .attribution {
+        color: var(--clr-light);
+    }   
+
+    .attribution__link {
+        color: var(--clr-light);
+
+        &:hover,
+        &:focus-visible {
+            color: var(--clr-attr-sec);
+        }
+
+        &:focus-visible {
+            outline: 3px solid var(--clr-attr-sec);
+        }
+    }
 }
